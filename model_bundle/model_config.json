@@ -1,0 +1,128 @@
+{
+  "model_name": "Global Online Signature Strong V2 Ensemble",
+  "architecture": "TCN + BiGRU + local temporal alignment + ArcFace + calibrated ensemble",
+  "sequence_length": 192,
+  "input_features": 37,
+  "base_feature_names": [
+    "x",
+    "y",
+    "delta_time",
+    "pressure",
+    "touch_area",
+    "delta_x",
+    "delta_y",
+    "speed",
+    "acceleration",
+    "sin_direction",
+    "cos_direction",
+    "accelerometer_x",
+    "accelerometer_y",
+    "gyroscope_x",
+    "gyroscope_y",
+    "gyroscope_z"
+  ],
+  "input_layout": "16 values + 16 availability masks + 5 metadata fields",
+  "reference_input_shape": [
+    "batch",
+    5,
+    192,
+    37
+  ],
+  "query_input_shape": [
+    "batch",
+    192,
+    37
+  ],
+  "output_columns": [
+    "genuine_probability",
+    "calibrated_logit",
+    "mean_cosine_similarity"
+  ],
+  "thresholds": {
+    "balanced_eer_threshold": 0.5623770426981638,
+    "secure_threshold": 0.840702876906377,
+    "secure_threshold_target_far": 0.05
+  },
+  "metrics": {
+    "validation": {
+      "auc": 0.9123895202020202,
+      "eer": 0.1684659090909091,
+      "threshold": 0.5623770426981638,
+      "far": 0.16875,
+      "frr": 0.16818181818181818,
+      "accuracy": 0.8315789473684211
+    },
+    "test_skilled": {
+      "auc": 0.8514685714285714,
+      "eer": 0.23485714285714288,
+      "threshold": 0.5623770426981638,
+      "far": 0.248,
+      "frr": 0.21428571428571427,
+      "accuracy": 0.7716666666666666
+    },
+    "test_combined": {
+      "auc": 0.881088,
+      "eer": 0.20534285714285716,
+      "threshold": 0.5623770426981638,
+      "far": 0.1984,
+      "frr": 0.21428571428571427,
+      "accuracy": 0.7932075471698113
+    },
+    "test_skilled_secure": {
+      "auc": 0.8514685714285714,
+      "eer": 0.23485714285714288,
+      "threshold": 0.840702876906377,
+      "far": 0.08,
+      "frr": 0.4042857142857143,
+      "accuracy": 0.7308333333333333
+    },
+    "test_combined_secure": {
+      "auc": 0.881088,
+      "eer": 0.20534285714285716,
+      "threshold": 0.840702876906377,
+      "far": 0.064,
+      "frr": 0.4042857142857143,
+      "accuracy": 0.7562264150943396
+    },
+    "per_domain": {
+      "MOBISIG": {
+        "auc": 0.8740639891082369,
+        "eer": 0.20612945314272751,
+        "threshold": 0.5623770426981638,
+        "far": 0.17699115044247787,
+        "frr": 0.2519230769230769,
+        "accuracy": 0.7776484284051223
+      },
+      "SVC2004_Task1": {
+        "auc": 0.9028368794326241,
+        "eer": 0.18664302600472812,
+        "threshold": 0.5623770426981638,
+        "far": 0.1773049645390071,
+        "frr": 0.2111111111111111,
+        "accuracy": 0.8095238095238095
+      },
+      "SVC2004_Task2": {
+        "auc": 0.9688888888888889,
+        "eer": 0.08026819923371645,
+        "threshold": 0.5623770426981638,
+        "far": 0.2689655172413793,
+        "frr": 0.0,
+        "accuracy": 0.8340425531914893
+      }
+    }
+  },
+  "training_records": {
+    "iSignDB": 1,
+    "MOBISIG": 5395,
+    "SVC2004_Task1": 1600,
+    "SVC2004_Task2": 1600,
+    "OnHW": 59999
+  },
+  "important": [
+    "The exported model requires exactly five enrollment signatures.",
+    "Use the secure threshold for banking/legal workflows.",
+    "Use the EER threshold when balanced FAR/FRR is preferred.",
+    "Do not compare raw PNG images; reproduce the same 37 input features.",
+    "Revalidate thresholds on signatures collected by the final Flutter application."
+  ]
+}

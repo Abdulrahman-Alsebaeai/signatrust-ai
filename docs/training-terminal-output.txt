@@ -1,0 +1,413 @@
+========================================================================
+Device: cuda
+GPU: Tesla P100-PCIE-16GB
+========================================================================
+Already downloaded: MOBISIG.ZIP
+Already downloaded: SVC2004_Task1.zip
+Already downloaded: SVC2004_Task2.zip
+Already downloaded: OnHW_chars.zip
+
+Data roots:
+ - /kaggle/working/global_signature_project/extracted/MOBISIG
+ - /kaggle/working/global_signature_project/extracted/SVC2004_Task1
+ - /kaggle/working/global_signature_project/extracted/SVC2004_Task2
+ - /kaggle/working/global_signature_project/extracted/OnHW
+ - /kaggle/input
+
+Loading parsed sequence cache...
+
+Total parsed sequences: 68,595
+
+All parsed data:
+  OnHW                    : 59,999
+  MOBISIG                 : 5,395
+  SVC2004_Task1           : 1,600
+  SVC2004_Task2           : 1,600
+  iSignDB                 : 1
+
+Labeled signature data:
+  MOBISIG                 : 5,395
+  SVC2004_Task1           : 1,600
+  SVC2004_Task2           : 1,600
+
+Writer-independent split:
+  Train signatures: 6010 writers: 114
+  Validation: 1260 writers: 24
+  Test: 1325 writers: 25
+  SSL total: 21010
+  Domains: 5
+
+Strong-V2 settings:
+  Balanced SSL samples: 33030
+  Active domains: ['MOBISIG', 'OnHW', 'SVC2004_Task1', 'SVC2004_Task2']
+  Ensemble models: 3
+  Enrollment references: 5
+  Checkpoints: /kaggle/working/global_signature_project_strong_v2/checkpoints
+
+============================================================================
+STAGE A: BALANCED SELF-SUPERVISED PRETRAINING
+============================================================================
+Balanced SSL 1/8: 100%
+ 516/516 [02:09<00:00,  4.02it/s, loss=2.16]
+Balanced SSL 2/8: 100%
+ 516/516 [02:08<00:00,  4.03it/s, loss=0.763]
+Balanced SSL 3/8: 100%
+ 516/516 [02:07<00:00,  3.98it/s, loss=0.591]
+Balanced SSL 4/8: 100%
+ 516/516 [02:09<00:00,  4.01it/s, loss=0.471]
+Balanced SSL 5/8: 100%
+ 516/516 [02:09<00:00,  4.02it/s, loss=0.429]
+Balanced SSL 6/8: 100%
+ 516/516 [02:07<00:00,  4.01it/s, loss=0.418]
+Balanced SSL 7/8: 100%
+ 516/516 [02:08<00:00,  4.03it/s, loss=0.366]
+Balanced SSL 8/8: 100%
+ 516/516 [02:08<00:00,  4.02it/s, loss=0.401]
+
+============================================================================
+STAGE B1: STRONG VERIFICATION MODEL — SEED 2026
+============================================================================
+Strong 1 epoch 1/30: 100%
+ 466/466 [01:24<00:00,  5.59it/s, loss=0.4]
+Strong 1 epoch 2/30: 100%
+ 466/466 [01:23<00:00,  6.18it/s, loss=0.274]
+Model 1 validation: AUC=0.8871, EER=0.1859
+Strong 1 epoch 3/30: 100%
+ 466/466 [01:23<00:00,  6.45it/s, loss=0.188]
+Strong 1 epoch 4/30: 100%
+ 466/466 [01:24<00:00,  4.95it/s, loss=0.178]
+Model 1 validation: AUC=0.9022, EER=0.1808
+Strong 1 epoch 5/30: 100%
+ 466/466 [01:23<00:00,  6.26it/s, loss=0.163]
+Strong 1 epoch 6/30: 100%
+ 466/466 [01:23<00:00,  6.40it/s, loss=0.147]
+Model 1 validation: AUC=0.8717, EER=0.2195
+Strong 1 epoch 7/30: 100%
+ 466/466 [01:23<00:00,  3.88it/s, loss=0.152]
+Strong 1 epoch 8/30: 100%
+ 466/466 [01:23<00:00,  5.96it/s, loss=0.144]
+Model 1 validation: AUC=0.8984, EER=0.1710
+Strong 1 epoch 9/30: 100%
+ 466/466 [01:23<00:00,  6.27it/s, loss=0.18]
+Strong 1 epoch 10/30: 100%
+ 466/466 [01:22<00:00,  6.57it/s, loss=0.158]
+Model 1 validation: AUC=0.8775, EER=0.1982
+Strong 1 epoch 11/30: 100%
+ 466/466 [01:22<00:00,  5.58it/s, loss=0.146]
+Strong 1 epoch 12/30: 100%
+ 466/466 [01:23<00:00,  6.29it/s, loss=0.145]
+Model 1 validation: AUC=0.8921, EER=0.1728
+Strong 1 epoch 13/30: 100%
+ 466/466 [01:23<00:00,  6.43it/s, loss=0.163]
+Strong 1 epoch 14/30: 100%
+ 466/466 [01:24<00:00,  4.90it/s, loss=0.147]
+Model 1 validation: AUC=0.8960, EER=0.1826
+Strong 1 epoch 15/30: 100%
+ 466/466 [01:23<00:00,  6.17it/s, loss=0.167]
+Strong 1 epoch 16/30: 100%
+ 466/466 [01:23<00:00,  6.47it/s, loss=0.169]
+Model 1 validation: AUC=0.8923, EER=0.1754
+Strong 1 epoch 17/30: 100%
+ 466/466 [01:23<00:00,  3.96it/s, loss=0.157]
+Strong 1 epoch 18/30: 100%
+ 466/466 [01:23<00:00,  5.97it/s, loss=0.14]
+Model 1 validation: AUC=0.8871, EER=0.1764
+Strong 1 epoch 19/30: 100%
+ 466/466 [01:23<00:00,  6.29it/s, loss=0.16]
+Strong 1 epoch 20/30: 100%
+ 466/466 [01:22<00:00,  6.49it/s, loss=0.139]
+Model 1 validation: AUC=0.8779, EER=0.1859
+Strong 1 epoch 21/30: 100%
+ 466/466 [01:22<00:00,  5.59it/s, loss=0.137]
+Strong 1 epoch 22/30: 100%
+ 466/466 [01:22<00:00,  6.53it/s, loss=0.154]
+Model 1 validation: AUC=0.8841, EER=0.1920
+Strong 1 epoch 23/30: 100%
+ 466/466 [01:22<00:00,  6.43it/s, loss=0.149]
+Strong 1 epoch 24/30: 100%
+ 466/466 [01:23<00:00,  4.94it/s, loss=0.139]
+Model 1 validation: AUC=0.8858, EER=0.1823
+Strong 1 epoch 25/30: 100%
+ 466/466 [01:23<00:00,  6.21it/s, loss=0.145]
+Strong 1 epoch 26/30: 100%
+ 466/466 [01:23<00:00,  6.43it/s, loss=0.154]
+Model 1 validation: AUC=0.8864, EER=0.1869
+Strong 1 epoch 27/30: 100%
+ 466/466 [01:23<00:00,  3.95it/s, loss=0.148]
+Strong 1 epoch 28/30: 100%
+ 466/466 [01:23<00:00,  6.02it/s, loss=0.156]
+Model 1 validation: AUC=0.8828, EER=0.1851
+Strong 1 epoch 29/30: 100%
+ 466/466 [01:23<00:00,  6.27it/s, loss=0.15]
+Strong 1 epoch 30/30: 100%
+ 466/466 [01:21<00:00,  6.55it/s, loss=0.144]
+Model 1 validation: AUC=0.8832, EER=0.1833
+Saved best ensemble model 1: /kaggle/working/global_signature_project_strong_v2/checkpoints/strong_v2_model_1.pt
+
+============================================================================
+STAGE B2: STRONG VERIFICATION MODEL — SEED 2041
+============================================================================
+Strong 2 epoch 1/30: 100%
+ 466/466 [01:21<00:00,  5.66it/s, loss=0.408]
+Strong 2 epoch 2/30: 100%
+ 466/466 [01:21<00:00,  6.40it/s, loss=0.238]
+Model 2 validation: AUC=0.8647, EER=0.2231
+Strong 2 epoch 3/30: 100%
+ 466/466 [01:21<00:00,  6.50it/s, loss=0.191]
+Strong 2 epoch 4/30: 100%
+ 466/466 [01:21<00:00,  4.98it/s, loss=0.175]
+Model 2 validation: AUC=0.8902, EER=0.1956
+Strong 2 epoch 5/30: 100%
+ 466/466 [01:22<00:00,  6.33it/s, loss=0.149]
+Strong 2 epoch 6/30: 100%
+ 466/466 [01:21<00:00,  6.07it/s, loss=0.179]
+Model 2 validation: AUC=0.8906, EER=0.1895
+Strong 2 epoch 7/30: 100%
+ 466/466 [01:22<00:00,  4.05it/s, loss=0.151]
+Strong 2 epoch 8/30: 100%
+ 466/466 [01:21<00:00,  6.13it/s, loss=0.147]
+Model 2 validation: AUC=0.8830, EER=0.1964
+Strong 2 epoch 9/30: 100%
+ 466/466 [01:21<00:00,  6.53it/s, loss=0.152]
+Strong 2 epoch 10/30: 100%
+ 466/466 [01:22<00:00,  6.43it/s, loss=0.146]
+Model 2 validation: AUC=0.8874, EER=0.1877
+Strong 2 epoch 11/30: 100%
+ 466/466 [01:23<00:00,  5.65it/s, loss=0.14]
+Strong 2 epoch 12/30: 100%
+ 466/466 [01:24<00:00,  6.35it/s, loss=0.152]
+Model 2 validation: AUC=0.8754, EER=0.2087
+Strong 2 epoch 13/30: 100%
+ 466/466 [01:22<00:00,  6.54it/s, loss=0.155]
+Strong 2 epoch 14/30: 100%
+ 466/466 [01:22<00:00,  4.98it/s, loss=0.146]
+Model 2 validation: AUC=0.8740, EER=0.2026
+Strong 2 epoch 15/30: 100%
+ 466/466 [01:21<00:00,  6.36it/s, loss=0.151]
+Strong 2 epoch 16/30: 100%
+ 466/466 [01:21<00:00,  6.65it/s, loss=0.131]
+Model 2 validation: AUC=0.8848, EER=0.1992
+Strong 2 epoch 17/30: 100%
+ 466/466 [01:21<00:00,  4.11it/s, loss=0.156]
+Strong 2 epoch 18/30: 100%
+ 466/466 [01:21<00:00,  6.02it/s, loss=0.153]
+Model 2 validation: AUC=0.8945, EER=0.1797
+Strong 2 epoch 19/30: 100%
+ 466/466 [01:21<00:00,  6.65it/s, loss=0.147]
+Strong 2 epoch 20/30: 100%
+ 466/466 [01:20<00:00,  6.62it/s, loss=0.15]
+Model 2 validation: AUC=0.8806, EER=0.1964
+Strong 2 epoch 21/30: 100%
+ 466/466 [01:21<00:00,  5.69it/s, loss=0.135]
+Strong 2 epoch 22/30: 100%
+ 466/466 [01:21<00:00,  6.50it/s, loss=0.146]
+Model 2 validation: AUC=0.8818, EER=0.1920
+Strong 2 epoch 23/30: 100%
+ 466/466 [01:21<00:00,  6.45it/s, loss=0.148]
+Strong 2 epoch 24/30: 100%
+ 466/466 [01:23<00:00,  4.82it/s, loss=0.15]
+Model 2 validation: AUC=0.8913, EER=0.1851
+Strong 2 epoch 25/30: 100%
+ 466/466 [01:22<00:00,  6.27it/s, loss=0.14]
+Strong 2 epoch 26/30: 100%
+ 466/466 [01:22<00:00,  6.23it/s, loss=0.149]
+Model 2 validation: AUC=0.8834, EER=0.1895
+Strong 2 epoch 27/30: 100%
+ 466/466 [01:23<00:00,  3.99it/s, loss=0.139]
+Strong 2 epoch 28/30: 100%
+ 466/466 [01:22<00:00,  6.11it/s, loss=0.134]
+Model 2 validation: AUC=0.8860, EER=0.1844
+Strong 2 epoch 29/30: 100%
+ 466/466 [01:22<00:00,  6.44it/s, loss=0.134]
+Strong 2 epoch 30/30: 100%
+ 466/466 [01:22<00:00,  6.42it/s, loss=0.142]
+Model 2 validation: AUC=0.8884, EER=0.1833
+Saved best ensemble model 2: /kaggle/working/global_signature_project_strong_v2/checkpoints/strong_v2_model_2.pt
+
+============================================================================
+STAGE B3: STRONG VERIFICATION MODEL — SEED 2063
+============================================================================
+Strong 3 epoch 1/30: 100%
+ 466/466 [01:23<00:00,  5.68it/s, loss=0.374]
+Strong 3 epoch 2/30: 100%
+ 466/466 [01:22<00:00,  6.33it/s, loss=0.26]
+Model 3 validation: AUC=0.8516, EER=0.2308
+Strong 3 epoch 3/30: 100%
+ 466/466 [01:22<00:00,  6.35it/s, loss=0.201]
+Strong 3 epoch 4/30: 100%
+ 466/466 [01:22<00:00,  4.97it/s, loss=0.175]
+Model 3 validation: AUC=0.9063, EER=0.1670
+Strong 3 epoch 5/30: 100%
+ 466/466 [01:22<00:00,  6.25it/s, loss=0.154]
+Strong 3 epoch 6/30: 100%
+ 466/466 [01:22<00:00,  6.46it/s, loss=0.145]
+Model 3 validation: AUC=0.8776, EER=0.1938
+Strong 3 epoch 7/30: 100%
+ 466/466 [01:23<00:00,  3.95it/s, loss=0.155]
+Strong 3 epoch 8/30: 100%
+ 466/466 [01:22<00:00,  5.99it/s, loss=0.164]
+Model 3 validation: AUC=0.9028, EER=0.1754
+Strong 3 epoch 9/30: 100%
+ 466/466 [01:23<00:00,  6.42it/s, loss=0.146]
+Strong 3 epoch 10/30: 100%
+ 466/466 [01:23<00:00,  6.40it/s, loss=0.154]
+Model 3 validation: AUC=0.8727, EER=0.2062
+Strong 3 epoch 11/30: 100%
+ 466/466 [01:23<00:00,  5.60it/s, loss=0.154]
+Strong 3 epoch 12/30: 100%
+ 466/466 [01:22<00:00,  6.41it/s, loss=0.149]
+Model 3 validation: AUC=0.8715, EER=0.2044
+Strong 3 epoch 13/30: 100%
+ 466/466 [01:22<00:00,  6.50it/s, loss=0.145]
+Strong 3 epoch 14/30: 100%
+ 466/466 [01:22<00:00,  5.02it/s, loss=0.137]
+Model 3 validation: AUC=0.8801, EER=0.2036
+Strong 3 epoch 15/30: 100%
+ 466/466 [01:22<00:00,  6.28it/s, loss=0.163]
+Strong 3 epoch 16/30: 100%
+ 466/466 [01:22<00:00,  6.48it/s, loss=0.147]
+Model 3 validation: AUC=0.8742, EER=0.2044
+Strong 3 epoch 17/30: 100%
+ 466/466 [01:23<00:00,  4.08it/s, loss=0.146]
+Strong 3 epoch 18/30: 100%
+ 466/466 [01:22<00:00,  6.00it/s, loss=0.153]
+Model 3 validation: AUC=0.8857, EER=0.1854
+Strong 3 epoch 19/30: 100%
+ 466/466 [01:23<00:00,  6.40it/s, loss=0.146]
+Strong 3 epoch 20/30: 100%
+ 466/466 [01:22<00:00,  6.64it/s, loss=0.157]
+Model 3 validation: AUC=0.8708, EER=0.2123
+Strong 3 epoch 21/30: 100%
+ 466/466 [01:23<00:00,  5.53it/s, loss=0.152]
+Strong 3 epoch 22/30: 100%
+ 466/466 [01:22<00:00,  6.25it/s, loss=0.154]
+Model 3 validation: AUC=0.8617, EER=0.2023
+Strong 3 epoch 23/30: 100%
+ 466/466 [01:22<00:00,  6.36it/s, loss=0.147]
+Strong 3 epoch 24/30: 100%
+ 466/466 [01:23<00:00,  4.94it/s, loss=0.127]
+Model 3 validation: AUC=0.8615, EER=0.2080
+Strong 3 epoch 25/30: 100%
+ 466/466 [01:21<00:00,  6.28it/s, loss=0.153]
+Strong 3 epoch 26/30: 100%
+ 466/466 [01:22<00:00,  6.45it/s, loss=0.142]
+Model 3 validation: AUC=0.8745, EER=0.2008
+Strong 3 epoch 27/30: 100%
+ 466/466 [01:22<00:00,  4.04it/s, loss=0.142]
+Strong 3 epoch 28/30: 100%
+ 466/466 [01:20<00:00,  6.25it/s, loss=0.149]
+Model 3 validation: AUC=0.8691, EER=0.1982
+Strong 3 epoch 29/30: 100%
+ 466/466 [01:20<00:00,  6.64it/s, loss=0.169]
+Strong 3 epoch 30/30: 100%
+ 466/466 [01:20<00:00,  6.68it/s, loss=0.146]
+Model 3 validation: AUC=0.8682, EER=0.2000
+Saved best ensemble model 3: /kaggle/working/global_signature_project_strong_v2/checkpoints/strong_v2_model_3.pt
+
+============================================================================
+STRONG-V2 VALIDATION — FIVE REFERENCES
+{
+  "auc": 0.9123895202020202,
+  "eer": 0.1684659090909091,
+  "threshold": 0.5623770426981638,
+  "far": 0.16875,
+  "frr": 0.16818181818181818,
+  "accuracy": 0.8315789473684211
+}
+
+VALIDATION AT SECURE THRESHOLD
+{
+  "auc": 0.9123895202020202,
+  "eer": 0.1684659090909091,
+  "threshold": 0.840702876906377,
+  "far": 0.05,
+  "frr": 0.36363636363636365,
+  "accuracy": 0.7684210526315789
+}
+
+TEST — SKILLED FORGERIES ONLY
+{
+  "auc": 0.8514685714285714,
+  "eer": 0.23485714285714288,
+  "threshold": 0.5623770426981638,
+  "far": 0.248,
+  "frr": 0.21428571428571427,
+  "accuracy": 0.7716666666666666
+}
+
+TEST — SKILLED + RANDOM FORGERIES
+{
+  "auc": 0.881088,
+  "eer": 0.20534285714285716,
+  "threshold": 0.5623770426981638,
+  "far": 0.1984,
+  "frr": 0.21428571428571427,
+  "accuracy": 0.7932075471698113
+}
+
+TEST SECURE OPERATING POINT — SKILLED
+{
+  "auc": 0.8514685714285714,
+  "eer": 0.23485714285714288,
+  "threshold": 0.840702876906377,
+  "far": 0.08,
+  "frr": 0.4042857142857143,
+  "accuracy": 0.7308333333333333
+}
+
+TEST SECURE OPERATING POINT — COMBINED
+{
+  "auc": 0.881088,
+  "eer": 0.20534285714285716,
+  "threshold": 0.840702876906377,
+  "far": 0.064,
+  "frr": 0.4042857142857143,
+  "accuracy": 0.7562264150943396
+}
+============================================================================
+
+Per-domain test metrics:
+{
+  "MOBISIG": {
+    "auc": 0.8740639891082369,
+    "eer": 0.20612945314272751,
+    "threshold": 0.5623770426981638,
+    "far": 0.17699115044247787,
+    "frr": 0.2519230769230769,
+    "accuracy": 0.7776484284051223
+  },
+  "SVC2004_Task1": {
+    "auc": 0.9028368794326241,
+    "eer": 0.18664302600472812,
+    "threshold": 0.5623770426981638,
+    "far": 0.1773049645390071,
+    "frr": 0.2111111111111111,
+    "accuracy": 0.8095238095238095
+  },
+  "SVC2004_Task2": {
+    "auc": 0.9688888888888889,
+    "eer": 0.08026819923371645,
+    "threshold": 0.5623770426981638,
+    "far": 0.2689655172413793,
+    "frr": 0.0,
+    "accuracy": 0.8340425531914893
+  }
+}
+TorchScript export: OK
+ONNX export and runtime validation: OK
+
+============================================================================
+STRONG-V2 TRAINING AND EXPORT COMPLETED
+Download:
+/kaggle/working/GLOBAL_SIGNATURE_STRONG_V2_DEPLOYMENT.zip
+
+Deployment files:
+ - README.txt: 0.00 MB
+ - global_signature_strong_v2.onnx: 18.01 MB
+ - global_signature_strong_v2_checkpoint.pt: 18.33 MB
+ - global_signature_strong_v2_torchscript.pt: 17.74 MB
+ - inference_example.py: 0.00 MB
+ - model_config.json: 0.00 MB
+ - requirements.txt: 0.00 MB
+ - training_manifest.json: 0.00 MB
+============================================================================

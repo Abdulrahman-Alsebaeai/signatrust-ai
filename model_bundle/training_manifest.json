@@ -1,0 +1,50 @@
+{
+  "created_at_unix": 1785328478.7604682,
+  "device": "cuda",
+  "records": 68595,
+  "balanced_ssl_records": 33030,
+  "train_records": 6010,
+  "validation_records": 1260,
+  "test_records": 1325,
+  "ensemble_models": 3,
+  "enrollment_references": 5,
+  "domains": {
+    "iSignDB": 1,
+    "MOBISIG": 5395,
+    "SVC2004_Task1": 1600,
+    "SVC2004_Task2": 1600,
+    "OnHW": 59999
+  },
+  "active_domains": [
+    "MOBISIG",
+    "OnHW",
+    "SVC2004_Task1",
+    "SVC2004_Task2"
+  ],
+  "individual_validation": [
+    {
+      "auc": 0.8984185606060606,
+      "eer": 0.1710227272727273,
+      "threshold": 0.23057708144187927,
+      "far": 0.17083333333333334,
+      "frr": 0.1712121212121212,
+      "accuracy": 0.8289473684210527
+    },
+    {
+      "auc": 0.8945328282828283,
+      "eer": 0.1797348484848485,
+      "threshold": 0.09026036411523819,
+      "far": 0.17916666666666667,
+      "frr": 0.1803030303030303,
+      "accuracy": 0.8201754385964912
+    },
+    {
+      "auc": 0.9062815656565657,
+      "eer": 0.16695075757575759,
+      "threshold": 0.3359692394733429,
+      "far": 0.16875,
+      "frr": 0.16515151515151516,
+      "accuracy": 0.8333333333333334
+    }
+  ]
+}
