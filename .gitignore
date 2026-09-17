@@ -1,0 +1,38 @@
+# Flutter / Dart
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.metadata
+
+# Android / IDE
+.gradle/
+.kotlin/
+.idea/
+.vscode/
+android/local.properties
+
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+key.properties
+
+# Python / training caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Large local artifacts
+app/assets/model_bundle/GLOBAL_SIGNATURE_STRONG_V2_DEPLOYMENT.zip
+*.mp4
+*.pt
+*.onnx
+
+# OS
+.DS_Store
+Thumbs.db
